@@ -1,5 +1,6 @@
 package com.spring.hibernate.chapter4;
 
+import com.spring.hibernate.chapter4.impl.CricketCoach;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,8 +12,10 @@ public class SetterInjection {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Coach cricketCoach = ctx.getBean("cricketCoach", Coach.class);
+        CricketCoach cricketCoach = ctx.getBean("cricketCoach", CricketCoach.class);
         System.out.println(cricketCoach.getDailyWorkout());
         System.out.println(cricketCoach.getDailyFortune());
+        System.out.println(cricketCoach.getEmailAddress());
+        System.out.println(cricketCoach.getTeam());
     }
 }

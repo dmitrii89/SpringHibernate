@@ -17,6 +17,8 @@
 
     <bean id="cricketCoach" class="com.spring.hibernate.chapter4.impl.CricketCoach" >
         <property name="fortuneService" ref="hardWorkFortune" />
+        <property name="emailAddress" value="dm@ch.ru" />
+        <property name="team" value="Zenith SPb" />
     </bean>
     
 </beans>
