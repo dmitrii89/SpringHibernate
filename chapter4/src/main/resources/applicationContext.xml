@@ -9,9 +9,14 @@
 
     <!-- Define your beans here -->
     <bean id="myFortune" class="com.spring.hibernate.chapter4.impl.HappyFortuneService" />
+    <bean id="hardWorkFortune" class="com.spring.hibernate.chapter4.impl.HardWorkFortuneService" />
 
     <bean id="myCoach" class="com.spring.hibernate.chapter4.impl.SwimCoach">
         <constructor-arg ref="myFortune"/>
+    </bean>
+
+    <bean id="cricketCoach" class="com.spring.hibernate.chapter4.impl.CricketCoach" >
+        <property name="fortuneService" ref="hardWorkFortune" />
     </bean>
     
 </beans>

@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Created by Dmitrii on 07.01.2019.
  */
-public class SpringApp {
+public class ConstructorInjection {
 
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
