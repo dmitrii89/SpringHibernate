@@ -7,9 +7,12 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:sport.properties" />
+
     <!-- Define your beans here -->
     <bean id="myFortune" class="com.spring.hibernate.chapter4.impl.HappyFortuneService" />
     <bean id="hardWorkFortune" class="com.spring.hibernate.chapter4.impl.HardWorkFortuneService" />
+    <bean id="randomFortune" class="com.spring.hibernate.chapter4.impl.RandomFortune" />
 
     <bean id="myCoach" class="com.spring.hibernate.chapter4.impl.SwimCoach">
         <constructor-arg ref="myFortune"/>
@@ -19,6 +22,12 @@
         <property name="fortuneService" ref="hardWorkFortune" />
         <property name="emailAddress" value="dm@ch.ru" />
         <property name="team" value="Zenith SPb" />
+    </bean>
+
+    <bean id="propertiesCricketCoach" class="com.spring.hibernate.chapter4.impl.CricketCoach" >
+        <property name="fortuneService" ref="randomFortune" />
+        <property name="emailAddress" value="${email}" />
+        <property name="team" value="${team}" />
     </bean>
     
 </beans>

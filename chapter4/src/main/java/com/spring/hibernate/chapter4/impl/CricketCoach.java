@@ -14,7 +14,6 @@ public class CricketCoach implements Coach {
     }
 
     public void setFortuneService(FortuneService fortuneService) {
-        System.out.println("Inside set fortune method");
         this.fortuneService = fortuneService;
     }
 
@@ -23,7 +22,6 @@ public class CricketCoach implements Coach {
     }
 
     public void setEmailAddress(String emailAddress) {
-        System.out.println("Inside set email address method");
         this.emailAddress = emailAddress;
     }
 
@@ -32,7 +30,6 @@ public class CricketCoach implements Coach {
     }
 
     public void setTeam(String team) {
-        System.out.println("Inside set team method");
         this.team = team;
     }
 
