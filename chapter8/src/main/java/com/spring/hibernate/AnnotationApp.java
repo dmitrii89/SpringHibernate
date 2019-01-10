@@ -17,12 +17,6 @@ public class AnnotationApp {
         //Practice right hand kick
         //You will have a lucky day
 
-        SwimCoach swimCoach = context.getBean("swimCoach", SwimCoach.class);
-        System.out.println(swimCoach.getDailyWorkout());
-        System.out.println(swimCoach.getDailyFortune());
-        //Swim 2km daily
-        //Work hard and you will get fortune!
-
         BoxingCoach boxingCoach = context.getBean("boxingCoach", BoxingCoach.class);
         System.out.println(boxingCoach.getDailyWorkout());
         System.out.println(boxingCoach.getDailyFortune());
@@ -32,7 +26,15 @@ public class AnnotationApp {
         FootballCoach footballCoach = context.getBean("footballCoach", FootballCoach.class);
         System.out.println(footballCoach.getDailyWorkout());
         System.out.println(footballCoach.getDailyFortune());
-        //Sparring in the morning and in the evening
+        //Kick a ball as hard as you can
+        //Master only one thing
+
+        SwimCoach swimCoach = context.getBean("swimCoach", SwimCoach.class);
+        System.out.println(swimCoach.getDailyWorkout());
+        System.out.println(swimCoach.getDailyFortune());
+        System.out.println(swimCoach.getGames());
+        //Swim 2km daily
         //Work hard and you will get fortune!
+        //Olympics 2018
     }
 }
