@@ -9,7 +9,6 @@
 
     <context:property-placeholder location="classpath:sport.properties" />
 
-    <!-- Define your beans here -->
     <bean id="myFortune" class="com.spring.hibernate.chapter4.impl.HappyFortuneService" />
     <bean id="hardWorkFortune" class="com.spring.hibernate.chapter4.impl.HardWorkFortuneService" />
     <bean id="randomFortune" class="com.spring.hibernate.chapter4.impl.RandomFortune" />
