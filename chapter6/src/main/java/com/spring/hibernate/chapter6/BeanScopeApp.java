@@ -16,6 +16,12 @@ public class BeanScopeApp {
         Coach prototypeCoach2 = ctx.getBean("prototypeCoach", SwimCoach.class);
         System.out.println("The same object: " + (prototypeCoach1 == prototypeCoach2)); // false
 
+//        New Swim Coach
+//        The same object: true
+//        New Swim Coach
+//        New Swim Coach
+//        The same object: false
+
         ctx.close();
     }
 }
