@@ -15,6 +15,7 @@
         <module>chapter8</module>
         <module>chapter9</module>
         <module>chapter10</module>
+        <module>chapter11</module>
     </modules>
 
     <properties>
@@ -51,6 +52,11 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
                 <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
