@@ -30,6 +30,9 @@ public class CustomerController {
 
     @RequestMapping("/processForm")
     public String processForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult){
+        System.out.println("Binding result: " + bindingResult);
+        //Field error in object 'customer' on field 'freePasses': rejected value [dsadsa];
+        //codes [typeMismatch.customer.freePasses,typeMismatch.freePasses,...
         if(bindingResult.hasErrors()) {
             return "form";
         }

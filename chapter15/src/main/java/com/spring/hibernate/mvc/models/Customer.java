@@ -1,7 +1,6 @@
 package com.spring.hibernate.mvc.models;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class Customer {
 
@@ -12,6 +11,13 @@ public class Customer {
     @NotNull(message = "Please, provide last name")
     @Size(min=3, message = "Minimum 3 symbols")
     private String lastName;
+
+    @Min(value = 0, message = "Number should be grater or equal than zero")
+    @Max(value = 10, message = "Number should be less than or equal to 10")
+    private Integer freePasses;
+
+    @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 digits or chars")
+    private String postalCode;
 
     public String getFirstName() {
         return firstName;
@@ -27,5 +33,21 @@ public class Customer {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Integer getFreePasses() {
+        return freePasses;
+    }
+
+    public void setFreePasses(Integer freePasses) {
+        this.freePasses = freePasses;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 }

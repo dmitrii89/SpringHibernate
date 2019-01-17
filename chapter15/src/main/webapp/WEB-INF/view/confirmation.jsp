@@ -11,5 +11,7 @@
 <h1>${title}</h1>
 <p>First name: ${customer.firstName}</p>
 <p>Last name: ${customer.lastName}</p>
+<p>Free passes: ${customer.freePasses}</p>
+<p>Postal code: ${customer.postalCode}</p>
 </body>
 </html>
