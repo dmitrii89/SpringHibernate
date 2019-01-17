@@ -1,18 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="header2" value="Second level header" />
+<c:set var="title" value="Your info" />
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home Controller</title>
+    <title>${title}</title>
 </head>
 <body>
-<h1>Home Controller</h1>
-<h2>${header2}</h2>
-<hr/>
-
-<a href="/showForm">Student Form</a>
-
+<h1>${title}</h1>
+<p>Your name: ${param.studentName}</p>
+<p>Your name: ${message}</p>
 </body>
 </html>
