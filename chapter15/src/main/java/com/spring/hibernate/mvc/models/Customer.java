@@ -1,5 +1,7 @@
 package com.spring.hibernate.mvc.models;
 
+import com.spring.hibernate.mvc.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -18,6 +20,9 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "Only 5 digits or chars")
     private String postalCode;
+
+    @CourseCode(value = {"TOP", "LUV"}, message = "Must start with TOP or LUV")
+    private String courseCode;
 
     public String getFirstName() {
         return firstName;
@@ -45,6 +50,14 @@ public class Customer {
 
     public String getPostalCode() {
         return postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 
     public void setPostalCode(String postalCode) {
