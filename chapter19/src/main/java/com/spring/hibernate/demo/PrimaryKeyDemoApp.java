@@ -22,9 +22,9 @@ public class PrimaryKeyDemoApp {
         try {
             // create a student object
             System.out.println("Creating students");
-            Student student1 = new Student("Витя", "Горбенко", "vitya.gorbenko@mail.ru");
-            Student student2 = new Student("Саша", "Порецкий", "sasha.poreckii@mail.ru");
-            Student student3 = new Student("Дима", "Лузин", "dima.luzin@mail.ru");
+            Student student1 = new Student("Вася", "Пупкин", "vasya.pupkin@mail.ru");
+            Student student2 = new Student("Павел", "Морозов", "pavel.morozov@mail.ru");
+            Student student3 = new Student("Саша", "Сашин", "sasha.sashin@mail.ru");
 
             //start a transaction
             System.out.println("Starting transaction");
@@ -44,9 +44,11 @@ public class PrimaryKeyDemoApp {
             factory.close();
         }
 
-//        Creating a student
+//        Creating a students
 //        Starting transaction
-//        Saving a student
+//        Saving a students
+//        Hibernate: insert into student (email, first_name, last_name, id) values (?, ?, ?, ?)
+//        Hibernate: insert into student (email, first_name, last_name, id) values (?, ?, ?, ?)
 //        Hibernate: insert into student (email, first_name, last_name, id) values (?, ?, ?, ?)
 //        Done!
     }
