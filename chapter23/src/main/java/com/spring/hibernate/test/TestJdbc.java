@@ -1,4 +1,4 @@
-package com.spring.hibernate;
+package com.spring.hibernate.test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
