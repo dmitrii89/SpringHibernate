@@ -26,7 +26,7 @@ public class OneToOneDemoApp {
         try {
             session.beginTransaction();
 
-            // this will also save detail class, because of CascadeType=All
+            // this will also save detail class, because of CascadeType=ALL
             session.save(instructor);
 
             session.getTransaction().commit();
