@@ -10,21 +10,35 @@ import javax.persistence.*;
 public class InstructorDetail {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
-    @Column(name = "youtube_channel")
+    @Column(name="youtube_channel")
     private String youtubeChannel;
 
-    @Column(name = "hobby")
+    @Column(name="hobby")
     private String hobby;
 
-    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    // add new field for instructor (also add getter/setters)
+
+    // add @OneToOne annotation
+
+    @OneToOne(mappedBy="instructorDetail",
+            cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private Instructor instructor;
 
 
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
+    }
+
     public InstructorDetail() {
+
     }
 
     public InstructorDetail(String youtubeChannel, String hobby) {
@@ -56,20 +70,9 @@ public class InstructorDetail {
         this.hobby = hobby;
     }
 
-    public Instructor getInstructor() {
-        return instructor;
-    }
-
-    public void setInstructor(Instructor instructor) {
-        this.instructor = instructor;
-    }
-
     @Override
     public String toString() {
-        return "InstructorDetail{" +
-                "id=" + id +
-                ", youtubeChannel='" + youtubeChannel + '\'' +
-                ", hobby='" + hobby +
-                '}';
+        return "InstructorDetail [id=" + id + ", youtubeChannel=" + youtubeChannel + ", hobby=" + hobby + "]";
     }
+
 }

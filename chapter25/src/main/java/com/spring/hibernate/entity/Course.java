@@ -2,20 +2,19 @@ package com.spring.hibernate.entity;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "course")
-public class Course {
 
+@Entity
+@Table(name="course")
+public class Course {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
 
-    @Column(name = "title")
+    @Column(name="title")
     private String title;
 
-    //@ManyToOne(cascade = CascadeType.ALL)
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+    @ManyToOne(cascade= {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
     @JoinColumn(name="instructor_id")
     private Instructor instructor;
 
@@ -52,9 +51,8 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                '}';
+        return "Course [id=" + id + ", title=" + title + "]";
     }
+
+
 }

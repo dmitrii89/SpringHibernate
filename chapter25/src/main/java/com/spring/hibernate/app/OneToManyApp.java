@@ -24,9 +24,11 @@ public class OneToManyApp {
         try {
             session.beginTransaction();
 
-            Instructor savedInstructor = session.get(Instructor.class, 7);
-            System.out.println("========== Saved instructor ================");
-            System.out.println(savedInstructor);
+            Instructor instructor = session.get(Instructor.class, 7);
+            System.out.println("========== Instructor ================");
+            System.out.println(instructor);
+            System.out.println("========== Instructor's courses ================");
+            System.out.println(instructor.getCourses());
 
             session.getTransaction().commit();
 
