@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SimpleController {
 
     @RequestMapping(value = "/listCustomers")
-    public static String showForm() {
+    public String showForm() {
         return "list-customers";
     }
 }
