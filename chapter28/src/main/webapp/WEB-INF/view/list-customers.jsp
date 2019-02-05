@@ -5,6 +5,7 @@
 
 <head>
 	<title>List Customers</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/style.css" />
 	
 </head>
 
@@ -26,9 +27,9 @@
 			</tr>
 			<c:forEach items="${customers}" var="customer">
 				<tr>
-					<th>${customer.firstName}</th>
-					<th>${customer.lastName}</th>
-					<th>${customer.email}</th>
+					<td>${customer.firstName}</td>
+					<td>${customer.lastName}</td>
+					<td>${customer.email}</td>
 				</tr>
 			</c:forEach>
 		</table>
