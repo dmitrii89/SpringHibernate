@@ -1,4 +1,4 @@
-package com.spring.hibernate;
+package com.spring.hibernate.testDb;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
