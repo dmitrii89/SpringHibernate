@@ -11,8 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggingAspect {
 
-    @Before("execution(public void addAccount())")
-    public void logg(){
+    //@Before("execution(public void addAccount())")
+    //@Before("execution(public void com.spring.hibernate.dao.AccountDAO.addAccount())")
+    //@Before("execution(void add*())")
+    @Before("execution(* add*())")
+    public void log(){
         System.out.println("\n======>>> Executing @Before advice on addAccount()");
     }
 }

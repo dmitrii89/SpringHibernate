@@ -2,6 +2,7 @@ package com.spring.hibernate.aop;
 
 import com.spring.hibernate.DemoConfig;
 import com.spring.hibernate.dao.AccountDAO;
+import com.spring.hibernate.dao.MembershipDAO;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -16,8 +17,8 @@ public class BeforeAopApp {
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
         accountDAO.addAccount();
 
-        System.out.println("\nLet's call it again ");
-        accountDAO.addAccount();
+        MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
+        membershipDAO.addMemberAccount();
 
         context.close();
     }
@@ -25,8 +26,6 @@ public class BeforeAopApp {
     //======>>> Executing @Before advice on addAccount()
     //class com.spring.hibernate.dao.AccountDAO: Doing my db work : adding account
     //
-    //Let's call it again
-    //
     //======>>> Executing @Before advice on addAccount()
-    //class com.spring.hibernate.dao.AccountDAO: Doing my db work : adding account
+    //class com.spring.hibernate.dao.MembershipDAO: Doing stuff : adding a membership account
 }
