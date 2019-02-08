@@ -1,4 +1,4 @@
-package com.spring.hibernate.aop;
+package com.spring.hibernate.app;
 
 import com.spring.hibernate.DemoConfig;
 import com.spring.hibernate.dao.AccountDAO;
