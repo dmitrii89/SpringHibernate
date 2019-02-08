@@ -17,4 +17,12 @@ public class MembershipDAO {
     public void cancelMembership(Account account) {
         System.out.println(getClass() + " cancelling membership of the account");
     }
+
+    public void getMembership(Account account) {
+        System.out.println(getClass() + " getting membership of the account");
+    }
+
+    public void setMembership(Account account) {
+        System.out.println(getClass() + " setting membership of the account");
+    }
 }
