@@ -1,5 +1,6 @@
 package com.spring.hibernate.dao;
 
+import com.spring.hibernate.model.Account;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,7 +10,11 @@ import org.springframework.stereotype.Component;
 public class MembershipDAO {
 
     public boolean addMemberAccount() {
-        System.out.println(getClass() + ": Doing stuff : adding a membership account");
+        System.out.println(getClass() + ": adding a membership account");
         return true;
+    }
+
+    public void cancelMembership(Account account) {
+        System.out.println(getClass() + " cancelling membership of the account");
     }
 }

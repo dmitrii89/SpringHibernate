@@ -14,7 +14,12 @@ public class LoggingAspect {
     //@Before("execution(public void addAccount())")
     //@Before("execution(public void com.spring.hibernate.dao.AccountDAO.addAccount())")
     //@Before("execution(void add*())")
-    @Before("execution(* add*())")
+    //@Before("execution(* add*())")
+    //@Before("execution(* add*(com.spring.hibernate.model.Account))")
+    //@Before("execution(* add*(com.spring.hibernate.model.Account, java.lang.Boolean))")
+    //@Before("execution(* add*(com.spring.hibernate.model.Account, ..))")
+    //@Before("execution(* add*(..))")
+    @Before("execution(* com.spring.hibernate.dao.*.*(..))")
     public void log(){
         System.out.println("\n======>>> Executing @Before advice on addAccount()");
     }
