@@ -22,6 +22,10 @@ public class AccountDAO {
         return Arrays.asList(dima, anya, mark);
     }
 
+    public List<Account> findAccountsException() {
+        throw new RuntimeException("Something went wrong");
+    }
+
     public void addAccount(){
         System.out.println(getClass() + ": Doing my db work : adding empty account");
     }

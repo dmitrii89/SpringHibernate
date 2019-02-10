@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by Dmitrii on 07.02.2019.
  */
-public class AfterReturningAspect {
+public class AfterReturningApp {
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class AfterReturningAspect {
         AccountDAO accountDAO = context.getBean("accountDAO", AccountDAO.class);
         List<Account> accounts = accountDAO.findAccounts();
 
-        System.out.println("\nMain program: AfterReturningAspect app");
+        System.out.println("\nMain program: AfterReturningApp");
         System.out.println("------");
         System.out.println("Modified data: " + accounts);
 
@@ -30,7 +30,7 @@ public class AfterReturningAspect {
     //======>>> Executing @AfterReturning on method: AccountDAO.findAccounts()
     //======>>> result is: [Account{name='Dima', level='platinum'}, Account{name='Anya', level='golden'}, Account{name='Mark', level='silver'}]
     //
-    //Main program: AfterReturningAspect app
+    //Main program: AfterReturningApp
     //------
     //Modified data: [Account{name='Dima Ch.', level='platinum'}, Account{name='Anya Ch.', level='golden'}, Account{name='Mark Ch.', level='silver'}]
 

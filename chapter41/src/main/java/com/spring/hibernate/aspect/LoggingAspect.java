@@ -3,6 +3,7 @@ package com.spring.hibernate.aspect;
 import com.spring.hibernate.model.Account;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -38,5 +39,16 @@ public class LoggingAspect {
                     r.setName(r.getName() + " Ch.")
             );
         }
+    }
+
+    @AfterThrowing(
+            pointcut = "execution(* findAccountsException(..))",
+            throwing = "exception"
+    )
+    public void afterThrowingAdvice(JoinPoint joinPoint, Throwable exception) {
+        String method = joinPoint.getSignature().toShortString();
+        System.out.println("======>>> Executing @AfterThrowing on method: " + method);
+
+        System.out.println("======>>> AfterThrowing caught the exception: " + exception);
     }
 }
