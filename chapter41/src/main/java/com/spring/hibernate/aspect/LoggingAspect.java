@@ -2,9 +2,11 @@ package com.spring.hibernate.aspect;
 
 import com.spring.hibernate.model.Account;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -57,5 +59,19 @@ public class LoggingAspect {
     public void afterFinally(JoinPoint joinPoint) {
         String method = joinPoint.getSignature().toShortString();
         System.out.println("======>>> Executing @After (finally) on method: " + method);
+    }
+
+    @Around("execution(* getFortune(..))")
+    public Object aroundGetFortune(ProceedingJoinPoint joinPoint) throws Throwable {
+        String method = joinPoint.getSignature().toShortString();
+        System.out.println("======>>> Executing @Around on method: " + method);
+
+        long begin = System.currentTimeMillis();
+        Object result = joinPoint.proceed();
+        long end = System.currentTimeMillis();
+
+        System.out.println("Duration: " + (end - begin)/1000.0 + " seconds");
+
+         return result;
     }
 }
