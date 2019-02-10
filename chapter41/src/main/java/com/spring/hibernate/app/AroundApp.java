@@ -1,8 +1,6 @@
 package com.spring.hibernate.app;
 
 import com.spring.hibernate.DemoConfig;
-import com.spring.hibernate.dao.AccountDAO;
-import com.spring.hibernate.model.Account;
 import com.spring.hibernate.service.TrafficFortuneService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,6 +27,11 @@ public class AroundApp {
         context.close();
     }
 
-    //
+    //Main program: AroundApp
+    //------
+    //======>>> Executing @Around on method: TrafficFortuneService.getFortune()
+    //Duration: 3.069 seconds
+    //My fortune: Expect heavy traffic this morning
+    //Finished
 
 }

@@ -15,6 +15,11 @@ public class TrafficFortuneService {
         return "Expect heavy traffic this morning";
     }
 
+    public String getFortuneForLogger() {
+        sleep();
+        return "Expect heavy traffic this morning";
+    }
+
     private void sleep() {
         try {
             TimeUnit.SECONDS.sleep(3);
