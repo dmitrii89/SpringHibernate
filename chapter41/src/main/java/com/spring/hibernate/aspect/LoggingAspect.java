@@ -2,6 +2,7 @@ package com.spring.hibernate.aspect;
 
 import com.spring.hibernate.model.Account;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -50,5 +51,11 @@ public class LoggingAspect {
         System.out.println("======>>> Executing @AfterThrowing on method: " + method);
 
         System.out.println("======>>> AfterThrowing caught the exception: " + exception);
+    }
+
+    @After("execution(* findAccounts*(..))")
+    public void afterFinally(JoinPoint joinPoint) {
+        String method = joinPoint.getSignature().toShortString();
+        System.out.println("======>>> Executing @After (finally) on method: " + method);
     }
 }
