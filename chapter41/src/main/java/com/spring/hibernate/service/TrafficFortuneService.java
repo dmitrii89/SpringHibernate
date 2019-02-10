@@ -16,8 +16,14 @@ public class TrafficFortuneService {
     }
 
     public String getFortuneForLogger() {
-        sleep();
-        return "Expect heavy traffic this morning";
+        return getFortune();
+    }
+
+    public String getFortuneOrNot(boolean flag) {
+        if(flag) {
+            throw new RuntimeException("Highway is closed!!!");
+        }
+        return getFortune();
     }
 
     private void sleep() {
