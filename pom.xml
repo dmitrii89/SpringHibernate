@@ -30,6 +30,7 @@
         <module>chapter40</module>
         <module>chapter41</module>
         <module>chapter45</module>
+        <module>chapter47</module>
     </modules>
 
     <properties>
@@ -91,6 +92,11 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>4.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>2.0</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
