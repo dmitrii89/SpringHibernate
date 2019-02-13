@@ -8,7 +8,9 @@ public class LoginController {
 
     @GetMapping("/loginPage")
     public String getLoginForm() {
-        return "fancy-login";
+        //return "plain-login";
+        //return "fancy-login";
+        return "fancy-login-token";
     }
 
 }
