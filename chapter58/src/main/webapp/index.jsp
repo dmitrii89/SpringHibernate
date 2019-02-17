@@ -14,6 +14,7 @@
 <h1>Welcome page!</h1>
 <h2>Project Rest demo</h2>
 <hr />
-<a href="${pageContext.request.contextPath}/test/hello">Hello</a>
+<p><a href="${pageContext.request.contextPath}/test/hello">Hello</a></p>
+<p><a href="${pageContext.request.contextPath}/api/students">Students list</a></p>
 </body>
 </html>
