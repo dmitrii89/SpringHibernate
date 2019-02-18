@@ -1,6 +1,7 @@
 package com.spring.hibernate.rest;
 
 import com.spring.hibernate.entity.Customer;
+import com.spring.hibernate.exceptions.CustomerNotFoundException;
 import com.spring.hibernate.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,12 +20,19 @@ public class CustomerRestController {
 
     @GetMapping("/customers")
     public List<Customer> getCustomers(){
-        return customerService.getCustomers();
+        List<Customer> customers = customerService.getCustomers();
+        return customers;
     }
 
     @GetMapping("/customers/{customerId}")
     public Customer getCustomers(@PathVariable int customerId){
-        return customerService.getCustomer(customerId);
+        Customer customer = customerService.getCustomer(customerId);
+
+        if(customer == null){
+            throw new CustomerNotFoundException("Customer id not found - " + customerId);
+        }
+
+        return customer;
     }
 
 }
