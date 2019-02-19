@@ -1,13 +1,13 @@
-package com.spring.hibernate.SpringHibernate;
+package com.spring.hibernate.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringHibernateApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringHibernateApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
