@@ -1,5 +1,6 @@
 package com.spring.hibernate.app.rest;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +11,12 @@ import java.time.LocalDateTime;
  */
 @RestController
 public class FunRestController {
+
+    @Value("${coach.name}")
+    private String coachName;
+
+    @Value("${team.name}")
+    private String teamName;
 
     @GetMapping("/")
     public String sayHello() {
@@ -24,6 +31,11 @@ public class FunRestController {
     @GetMapping("/fortune")
     public String getDailyFortune() {
         return "Today is your lucky day";
+    }
+
+    @GetMapping("/team-info")
+    public String getDetails() {
+        return String.format("Team name: %s, coach name: %s", teamName, coachName);
     }
 
 
