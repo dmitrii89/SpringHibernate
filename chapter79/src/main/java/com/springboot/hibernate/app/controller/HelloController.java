@@ -10,7 +10,7 @@ import java.util.Date;
  * Created by Dmitrii on 22.02.2019.
  */
 @Controller
-public class DemoRestController {
+public class HelloController {
 
     @GetMapping("/hello")
     public String sayHello(Model model) {
