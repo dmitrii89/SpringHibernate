@@ -1,5 +1,7 @@
 # SpringHibernate
 
+Udemy course by https://www.udemy.com/spring-hibernate-tutorial/
+
 ## Chapters description
 * 1 - 10 Core Spring
 * 11 - 17 Spring MVC
