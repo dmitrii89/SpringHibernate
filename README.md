@@ -1,6 +1,6 @@
 # SpringHibernate
 
-Udemy course by https://www.udemy.com/spring-hibernate-tutorial/
+Udemy course: https://www.udemy.com/spring-hibernate-tutorial/
 
 ## Chapters description
 * 1 - 10 Core Spring
