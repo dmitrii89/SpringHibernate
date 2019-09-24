@@ -35,10 +35,17 @@
         <module>chapter53</module>
         <module>chapter54</module>
         <module>chapter54bonus</module>
+        <module>chapter54springboot</module>
         <module>chapter57</module>
         <module>chapter58</module>
         <module>chapter61</module>
         <module>chapter63</module>
+        <module>chapter70</module>
+        <module>chapter74</module>
+        <module>chapter76</module>
+        <module>chapter77</module>
+        <module>chapter78</module>
+        <module>chapter79</module>
     </modules>
 
     <properties>
