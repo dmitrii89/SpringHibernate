@@ -17,7 +17,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     //public EmployeeServiceImpl(EmployeeDao employeeDao) {
-    public EmployeeServiceImpl(@Qualifier("employeeDaoJpaImpl") EmployeeDao employeeDao) {
+    //public EmployeeServiceImpl(@Qualifier("employeeDaoJpaImpl") EmployeeDao employeeDao) {
+    public EmployeeServiceImpl(@Qualifier("employeeDaoPersistenceContextImpl") EmployeeDao employeeDao) {
         this.employeeDao = employeeDao;
     }
 
